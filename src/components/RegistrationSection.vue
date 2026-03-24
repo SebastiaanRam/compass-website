@@ -50,56 +50,32 @@
         </p>
       </div>
 
-      <form class="registration-form" @submit.prevent="handleSubmit">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input id="firstName" type="text" placeholder="Jane" required />
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input id="lastName" type="text" placeholder="Doe" required />
-          </div>
+      <div class="registration-form">
+        <div v-if="formUrl" class="form-embed">
+          <iframe
+            :src="formUrl"
+            frameborder="0"
+            class="ms-form-iframe"
+            allowfullscreen
+          ></iframe>
         </div>
-
-        <div class="form-group">
-          <label for="email">Institutional Email</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="jane.doe@institution.edu"
-            required
-          />
+        <div v-else class="form-placeholder">
+          <i class="fas fa-clipboard-list form-placeholder-icon"></i>
+          <h3 class="form-placeholder-title">Registration Opening Soon</h3>
+          <p class="form-placeholder-text">
+            The registration form will be available here shortly. Stay tuned!
+          </p>
         </div>
-
-        <div class="form-group">
-          <label for="role">Role / Affiliation</label>
-          <select id="role" required>
-            <option value="" disabled selected>Select your role</option>
-            <option value="clinician">Clinician / Medical Professional</option>
-            <option value="researcher">Researcher / Academic</option>
-            <option value="engineer">AI/ML Engineer</option>
-            <option value="student">Student / PhD Candidate</option>
-            <option value="industry">Industry Professional</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn-submit">Complete Registration</button>
-
-        <p class="form-disclaimer">
-          By registering, you agree to our
-          <a href="#">Terms &amp; Conditions</a>.
-        </p>
-      </form>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-function handleSubmit() {
-  alert("Registration submitted! (This is a demo)");
-}
+import { ref } from 'vue'
+
+// Replace with the Microsoft Forms URL when available
+const formUrl = ref('')
 </script>
 
 <style scoped>
@@ -134,87 +110,57 @@ function handleSubmit() {
 .registration-form {
   background: var(--color-card-bg);
   border-radius: 20px;
-  padding: 48px;
-  max-width: 680px;
+  max-width: 780px;
   margin: 0 auto;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
 }
 
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.form-embed {
+  width: 100%;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
+.ms-form-iframe {
+  width: 100%;
+  min-height: 600px;
+  border: none;
   display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-text-dark);
-  margin-bottom: 8px;
 }
 
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  font-size: 15px;
-  color: var(--color-text-dark);
-  background: white;
-  transition: border-color var(--transition);
-  outline: none;
-}
-
-.form-group input::placeholder {
-  color: var(--color-text-muted);
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  border-color: var(--color-primary);
-}
-
-.btn-submit {
-  width: 100%;
-  padding: 16px;
-  background: var(--color-primary);
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 10px;
-  margin-top: 8px;
-  transition: background-color var(--transition);
-}
-
-.btn-submit:hover {
-  background: var(--color-primary-dark);
-}
-
-.form-disclaimer {
+.form-placeholder {
+  padding: 64px 48px;
   text-align: center;
-  font-size: 13px;
-  color: var(--color-text-muted);
-  margin-top: 16px;
 }
 
-.form-disclaimer a {
+.form-placeholder-icon {
+  font-size: 48px;
   color: var(--color-primary);
-  text-decoration: underline;
+  margin-bottom: 24px;
+}
+
+.form-placeholder-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+
+.form-placeholder-text {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 @media (max-width: 640px) {
-  .form-row {
-    grid-template-columns: 1fr;
+  .form-placeholder {
+    padding: 40px 20px;
   }
 
-  .registration-form {
-    padding: 28px 20px;
+  .ms-form-iframe {
+    min-height: 500px;
   }
 }
 </style>

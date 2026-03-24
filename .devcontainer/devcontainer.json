@@ -1,7 +1,12 @@
 {
   "name": "compass-website",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.claude-memory,target=/home/node/.claude-memory,type=bind,consistency=cached"
+  ],
   "features": {},
+  "initializeCommand": "mkdir -p ${localWorkspaceFolder}/.claude-memory",
+  "onCreateCommand": "sudo mkdir -p /home/node/.vscode-server/data/User/globalStorage && sudo ln -snf /home/node/.claude-memory /home/node/.vscode-server/data/User/globalStorage/anthropic.claude-code && sudo chown -R node:node /home/node/.vscode-server /home/node/.claude-memory",
   "postCreateCommand": "npm install -g @vue/cli",
   "forwardPorts": [5173, 8080],
   "portsAttributes": {
@@ -17,6 +22,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "anthropic.claude-code",
         "Vue.volar",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode"

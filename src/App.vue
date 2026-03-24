@@ -1,5 +1,4 @@
 <script setup>
-import NavHeader from './components/NavHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import ThemesSection from './components/ThemesSection.vue'
 import SpeakersSection from './components/SpeakersSection.vue'
@@ -9,7 +8,6 @@ import FooterSection from './components/FooterSection.vue'
 </script>
 
 <template>
-  <NavHeader />
   <main>
     <HeroSection />
     <ThemesSection />

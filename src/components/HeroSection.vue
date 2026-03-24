@@ -1,16 +1,24 @@
 <template>
   <section id="about" class="hero">
     <div class="container hero-content">
+      <div class="hero-logo">
+        <img src="/compass-logo.png" alt="COMPASS logo" class="hero-logo-icon" />
+      </div>
       <span class="badge">2026 SYMPOSIUM</span>
       <h1 class="hero-title">
-        Clinical Oversight through<br />
-        Meaningful Participation of<br />
-        <span class="highlight">AI-Supported Systems</span>
+        Who holds the <span class="highlight">compass</span>?
       </h1>
+      <p class="hero-tagline">
+        Navigating AI explainability, accountability, and design.
+      </p>
+      <p class="hero-acronym">
+        <strong>C</strong>linical <strong>O</strong>versight through
+        <strong>M</strong>eaningful <strong>P</strong>articipation of
+        <strong>A</strong>I-<strong>S</strong>upported <strong>S</strong>ystems
+      </p>
       <p class="hero-description">
-        Join leading researchers, clinicians, and AI experts to explore the
-        future of human-centric artificial intelligence in healthcare at
-        Radboudumc.
+        Join us for a one-day symposium with expert clinicians, ethicists, and
+        researchers.
       </p>
       <div class="hero-actions">
         <a href="#register" class="btn-primary">
@@ -33,22 +41,29 @@
 
 <script setup>
 const stats = [
-  { value: "15+", label: "EXPERT SPEAKERS" },
+  { value: "6+", label: "EXPERT SPEAKERS" },
   { value: "4", label: "CORE THEMES" },
-  { value: "1", label: "DAY OF INSIGHTS" },
-  { value: "500+", label: "ATTENDEES" },
+  { value: "100+", label: "PARTICIPANTS" },
 ];
 </script>
 
 <style scoped>
 .hero {
-  padding-top: 72px;
   background: var(--color-bg-light);
 }
 
 .hero-content {
   text-align: center;
-  padding: 80px 24px 60px;
+  padding: 64px 24px 60px;
+}
+
+.hero-logo {
+  margin-bottom: 28px;
+}
+
+.hero-logo-icon {
+  height: 80px;
+  width: auto;
 }
 
 .badge {
@@ -75,6 +90,30 @@ const stats = [
   color: var(--color-primary);
 }
 
+.hero-tagline {
+  font-size: 22px;
+  color: var(--color-navy);
+  font-weight: 600;
+  max-width: 620px;
+  margin: 0 auto 16px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+}
+
+.hero-acronym {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  max-width: 580px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.hero-acronym strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
 .hero-description {
   font-size: 18px;
   color: var(--color-text-muted);
@@ -98,7 +137,7 @@ const stats = [
 
 .stats-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   text-align: center;
 }

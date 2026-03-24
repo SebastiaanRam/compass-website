@@ -4,9 +4,10 @@
       <div class="schedule-header">
         <h2 class="section-title schedule-title">Event Schedule</h2>
         <p class="section-subtitle schedule-sub">
-          A comprehensive one-day program designed to foster collaboration and
-          share cutting-edge insights.
+          A one-day program of interactive discussions, panels, and talks
+          designed to foster collaboration and share cutting-edge insights.
         </p>
+        <span class="preliminary-badge">Preliminary Schedule</span>
       </div>
 
       <div class="schedule-card">
@@ -22,18 +23,14 @@
             <div class="schedule-details">
               <h3 class="schedule-event-title">{{ item.title }}</h3>
               <p class="schedule-event-desc">{{ item.description }}</p>
-              <div class="schedule-speaker" v-if="item.speaker">
-                <i class="fas fa-user"></i>
-                <span>{{ item.speaker }}</span>
-              </div>
             </div>
           </div>
         </div>
 
-        <div class="schedule-footer">
-          <a href="#" class="download-link">
-            Download Full Agenda (PDF) <i class="fas fa-download"></i>
-          </a>
+        <div class="schedule-note">
+          <i class="fas fa-circle-info"></i>
+          The final schedule with confirmed speakers and session details will be
+          announced soon.
         </div>
       </div>
     </div>
@@ -44,45 +41,14 @@
 const scheduleItems = [
   {
     time: "09:00 AM",
-    title: "Opening Keynote: The Future of AI in Radboudumc",
-    description:
-      "An overview of how AI is transforming clinical workflows and patient care.",
-    speaker: "Dr. Sarah Chen",
+    title: "Opening & Welcome",
+    description: "Introduction to the symposium and its themes.",
   },
   {
-    time: "10:30 AM",
-    title: "Panel: Navigating the Ethics of Clinical AI",
+    time: "04:00 PM",
+    title: "Closing Discussion & Reflections",
     description:
-      "A discussion on meaningful human control and mitigating algorithmic bias.",
-    speaker: "Dr. Rostova, Prof. Weber, Dr. Jansen",
-  },
-  {
-    time: "12:00 PM",
-    title: "Lunch Break & Networking",
-    description:
-      "Connect with fellow researchers, clinicians, and AI practitioners.",
-    speaker: null,
-  },
-  {
-    time: "01:00 PM",
-    title: "Workshop: Implementing Predictive Models",
-    description:
-      "Hands-on session translating research models into clinical practice tools.",
-    speaker: "BioMedTech Team",
-  },
-  {
-    time: "02:30 PM",
-    title: "Research Presentations: Advances in Medical AI",
-    description:
-      "Short talks showcasing the latest breakthroughs in healthcare AI research.",
-    speaker: "Selected Presenters",
-  },
-  {
-    time: "03:30 PM",
-    title: "Closing Remarks & Future Directions",
-    description:
-      "Reflecting on key insights and outlining the roadmap for COMPASS initiatives.",
-    speaker: "Dr. Sarah Chen",
+      "Wrapping up the day with key takeaways and future directions.",
   },
 ];
 </script>
@@ -104,6 +70,19 @@ const scheduleItems = [
 
 .schedule-sub {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.preliminary-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+  text-transform: uppercase;
 }
 
 .schedule-card {
@@ -169,38 +148,23 @@ const scheduleItems = [
   line-height: 1.5;
 }
 
-.schedule-speaker {
-  display: inline-flex;
+.schedule-note {
+  display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--color-text-muted);
-}
-
-.schedule-speaker i {
-  font-size: 12px;
-  color: var(--color-primary);
-}
-
-.schedule-footer {
-  text-align: center;
+  gap: 10px;
   margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 16px 20px;
+  background: var(--color-bg-light);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
 
-.download-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  font-weight: 600;
+.schedule-note i {
   color: var(--color-primary);
-  transition: gap var(--transition);
-}
-
-.download-link:hover {
-  gap: 12px;
+  font-size: 16px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {

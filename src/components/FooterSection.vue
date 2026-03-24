@@ -9,36 +9,33 @@
           </div>
           <p class="footer-description">
             Clinical Oversight through Meaningful Participation of AI-Supported
-            Systems. Hosted by Radboudumc.
+            Systems.
           </p>
-          <div class="footer-socials">
+          <p class="footer-hosts">
+            Hosted by
+            <a
+              href="https://www.computationalpathologygroup.eu/"
+              target="_blank"
+              rel="noopener"
+              >Computational Pathology Group</a
+            >
+            (Radboudumc) &amp;
+            <a
+              href="https://www.ru.nl/afdelingen/donders-centre-for-cognition/meaningful-human-control-of-ai"
+              target="_blank"
+              rel="noopener"
+              >Meaningful Human Control of AI</a
+            >
+            (Radboud University)
+          </p>
+          <!-- <div class="footer-socials">
             <a href="#" aria-label="Twitter"
               ><i class="fab fa-x-twitter"></i
             ></a>
             <a href="#" aria-label="LinkedIn"
               ><i class="fab fa-linkedin-in"></i
             ></a>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#about">About Symposium</a></li>
-            <li><a href="#themes">Core Themes</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#schedule">Full Schedule</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Call for Papers</a></li>
-            <li><a href="#">Accommodation</a></li>
-            <li><a href="#">Venue Information</a></li>
-            <li><a href="#">Sponsorship Kit</a></li>
-          </ul>
+          </div> -->
         </div>
 
         <div class="footer-contact">
@@ -62,10 +59,6 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 COMPASS Symposium / Radboudumc. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
       </div>
     </div>
   </footer>
@@ -80,7 +73,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
 }
@@ -108,7 +101,22 @@
 .footer-description {
   font-size: 14px;
   line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.footer-hosts {
+  font-size: 13px;
+  line-height: 1.6;
   margin-bottom: 20px;
+}
+
+.footer-hosts a {
+  color: var(--color-primary-light);
+  transition: color var(--transition);
+}
+
+.footer-hosts a:hover {
+  color: white;
 }
 
 .footer-socials {
@@ -136,29 +144,12 @@
   color: white;
 }
 
-.footer-links h4,
 .footer-contact h4 {
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
   color: white;
   margin-bottom: 20px;
-}
-
-.footer-links ul {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  transition: color var(--transition);
-}
-
-.footer-links a:hover {
-  color: white;
 }
 
 .footer-contact .contact-item {
