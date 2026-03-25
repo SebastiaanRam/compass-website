@@ -48,7 +48,7 @@ const speakers = [
   {
     name: "Dr. Giulio Mecacci",
     initials: "GM",
-    photo: "https://profilepage.ru.nl/profileservice/rest/1.0//profilephoto/611306?timestamp=1774312671&user=611306&hash=0da9260c632295c4c01620884665ab3caae0a099aeb44e81660cc876e1b95490&secure=false",
+    photo: "/speakers/mecacci.webp",
     role: "",
     bio: "",
     keynote: false,
@@ -58,7 +58,7 @@ const speakers = [
   {
     name: "Dr. Banu Buruk",
     initials: "BB",
-    photo: "https://profilepage.ru.nl/profileservice/rest/1.0//profilephoto/2915107?timestamp=1774370164&user=2915107&hash=6dab892ddea9affdde0c8ce3483d517130f10ac392dce3e531c92d5735042161&secure=false",
+    photo: "/speakers/buruk.webp",
     role: "",
     bio: "",
     keynote: false,
@@ -162,7 +162,7 @@ const speakers = [
 .speaker-photo {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 

@@ -2,7 +2,7 @@
   <section id="about" class="hero">
     <div class="container hero-content">
       <div class="hero-logo">
-        <img src="/compass-logo.png" alt="COMPASS logo" class="hero-logo-icon" />
+        <img src="/compass-logo.webp" alt="COMPASS logo" class="hero-logo-icon" />
       </div>
       <span class="badge">2026 SYMPOSIUM</span>
       <h1 class="hero-title">

@@ -2,10 +2,10 @@
   <section id="schedule" class="schedule">
     <div class="container">
       <div class="schedule-header">
-        <h2 class="section-title schedule-title">Event Schedule</h2>
+        <h2 class="section-title schedule-title">Schedule</h2>
         <p class="section-subtitle schedule-sub">
-          A one-day program of interactive discussions, panels, and talks
-          designed to foster collaboration and share cutting-edge insights.
+          A tailored one-day program of interactive discussions, panels, and
+          talks.
         </p>
         <span class="preliminary-badge">Preliminary Schedule</span>
       </div>
@@ -45,10 +45,14 @@ const scheduleItems = [
     description: "Introduction to the symposium and its themes.",
   },
   {
+    time: "12:00 PM",
+    title: "Lunch Break",
+    description: "Networking and refreshments.",
+  },
+  {
     time: "04:00 PM",
     title: "Closing Discussion & Reflections",
-    description:
-      "Wrapping up the day with key takeaways and future directions.",
+    description: "Wrapping up",
   },
 ];
 </script>

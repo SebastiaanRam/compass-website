@@ -4,7 +4,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img class="logo-icon" src="/compass-logo.png" alt="COMPASS logo" />
+            <img class="logo-icon" src="/compass-logo.webp" alt="COMPASS logo" />
             <span class="footer-logo-text">COMPASS</span>
           </div>
           <p class="footer-description">

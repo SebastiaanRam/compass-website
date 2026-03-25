@@ -2,10 +2,10 @@
   <section id="themes" class="themes">
     <div class="container">
       <div class="themes-header">
-        <h2 class="section-title">Symposium Themes</h2>
+        <h2 class="section-title">Themes</h2>
         <p class="section-subtitle">
-          Exploring the intersection of advanced technology and clinical excellence
-          through four foundational pillars.
+          Bridging ethics, human-AI interaction, and clinical practice to move
+          beyond abstract principles toward real-world meaningful human control.
         </p>
       </div>
 
@@ -15,7 +15,7 @@
             <i :class="theme.icon"></i>
           </div>
           <h3 class="theme-title">{{ theme.title }}</h3>
-          <p class="theme-description">{{ theme.description }}</p>
+          <p class="theme-description" v-html="theme.description"></p>
         </div>
       </div>
     </div>
@@ -25,30 +25,30 @@
 <script setup>
 const themes = [
   {
-    icon: 'fas fa-flask',
-    title: 'Research',
+    icon: "fas fa-flask",
+    title: "Research",
     description:
-      'Advancing the theoretical foundations of medical AI, focusing on interpretability, fairness, and robustness in healthcare models.',
+      "<b>From design to deployment</b>: Defining the critical conditions for meaningful human control throughout AI model development grounded in cross-faculty collaboration.",
   },
   {
-    icon: 'fas fa-user-doctor',
-    title: 'Clinical Practice',
+    icon: "fas fa-user-doctor",
+    title: "Clinical Practice",
     description:
-      'Translating AI innovations into actionable clinical workflows, enhancing diagnostic accuracy and patient outcomes.',
+      "<b>Maintaining oversight</b>: Addressing how clinicians can maintain oversight and avoid deferring to incorrect AI recommendations, ensuring diagnoses that are both accurate and clinically justified.",
   },
   {
-    icon: 'fas fa-microchip',
-    title: 'BioMedTech',
+    icon: "fas fa-brain",
+    title: "Human-Centric AI",
     description:
-      'Integrating hardware and software solutions, from wearable sensors to advanced imaging systems powered by deep learning.',
+      "<b>Ensuring human agency</b>: Tackling responsibility gaps in AI-driven clinical decisions so that clinicians remain moral agents capable of intervening, boosting both patient safety and wellbeing.",
   },
   {
-    icon: 'fas fa-brain',
-    title: 'Human-Centric AI',
+    icon: "fas fa-microchip",
+    title: "BioMedTech",
     description:
-      'Ensuring AI systems remain tools for human oversight, prioritizing ethical deployment and meaningful human participation.',
+      "<b>Integrating hardware and software</b>: Exploring how technical design choices in medical AI systems shape the balance between model accuracy and the ethical, legal, and practical need for human oversight.",
   },
-]
+];
 </script>
 
 <style scoped>
@@ -73,7 +73,9 @@ const themes = [
   border-radius: 16px;
   padding: 32px 28px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .theme-card:hover {

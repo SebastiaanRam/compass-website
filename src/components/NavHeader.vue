@@ -2,7 +2,7 @@
   <header class="nav-header" :class="{ scrolled: isScrolled }">
     <div class="container nav-container">
       <a href="#" class="logo" @click.prevent="scrollToTop">
-        <img class="logo-icon" src="/compass-logo.png" alt="COMPASS logo" />
+        <img class="logo-icon" src="/compass-logo.webp" alt="COMPASS logo" />
         <span class="logo-text">COMPASS</span>
       </a>
 
@@ -15,6 +15,7 @@
         <a href="#themes" @click="closeMobile">Themes</a>
         <a href="#speakers" @click="closeMobile">Speakers</a>
         <a href="#schedule" @click="closeMobile">Schedule</a>
+        <a href="#venue" @click="closeMobile">Venue</a>
         <a href="#register" class="btn-primary nav-cta" @click="closeMobile">Register Now</a>
       </nav>
     </div>
