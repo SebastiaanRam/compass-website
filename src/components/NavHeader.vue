@@ -16,7 +16,7 @@
         <a href="#speakers" @click="closeMobile">Speakers</a>
         <a href="#schedule" @click="closeMobile">Schedule</a>
         <a href="#venue" @click="closeMobile">Venue</a>
-        <a href="#register" class="btn-primary nav-cta" @click="closeMobile">Register Now</a>
+        <a href="https://www.radboudumc.nl/en/forms/compass-2026-symposium-registration" target="_blank" rel="noopener noreferrer" class="btn-primary nav-cta" @click="closeMobile">Register Now</a>
       </nav>
     </div>
   </header>

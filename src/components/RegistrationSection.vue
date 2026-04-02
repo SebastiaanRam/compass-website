@@ -50,19 +50,23 @@
         </p>
       </div>
 
-      <div class="registration-form">
-        <div v-if="formUrl" class="form-embed">
-          <iframe
-            :src="formUrl"
-            frameborder="0"
-            class="ms-form-iframe"
-            allowfullscreen
-          ></iframe>
+      <div class="registration-cta">
+        <div v-if="formUrl" class="cta-card">
+          <i class="fas fa-clipboard-list cta-icon"></i>
+          <p class="cta-text">
+            Registration is handled via the Radboudumc website. Click the button below to open the form in a new tab.
+          </p>
+          <a :href="formUrl" target="_blank" rel="noopener noreferrer" class="cta-button">
+            Register Now <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+          <p class="cta-perks">
+            <i class="fas fa-utensils"></i> Free lunch included
+          </p>
         </div>
-        <div v-else class="form-placeholder">
-          <i class="fas fa-clipboard-list form-placeholder-icon"></i>
-          <h3 class="form-placeholder-title">Registration Opening Soon</h3>
-          <p class="form-placeholder-text">
+        <div v-else class="cta-card">
+          <i class="fas fa-clipboard-list cta-icon"></i>
+          <h3 class="cta-placeholder-title">Registration Opening Soon</h3>
+          <p class="cta-text">
             The registration form will be available here shortly. Stay tuned!
           </p>
         </div>
@@ -72,10 +76,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-// Replace with the Microsoft Forms URL when available
-const formUrl = ref('')
+const formUrl = 'https://www.radboudumc.nl/en/forms/compass-2026-symposium-registration'
 </script>
 
 <style scoped>
@@ -107,38 +108,26 @@ const formUrl = ref('')
   margin-bottom: 40px;
 }
 
-.registration-form {
+.registration-cta {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-card {
   background: var(--color-card-bg);
   border-radius: 20px;
-  max-width: 780px;
-  margin: 0 auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-}
-
-.form-embed {
-  width: 100%;
-}
-
-.ms-form-iframe {
-  width: 100%;
-  min-height: 600px;
-  border: none;
-  display: block;
-}
-
-.form-placeholder {
-  padding: 64px 48px;
+  padding: 56px 48px;
   text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 }
 
-.form-placeholder-icon {
+.cta-icon {
   font-size: 48px;
   color: var(--color-primary);
   margin-bottom: 24px;
 }
 
-.form-placeholder-title {
+.cta-placeholder-title {
   font-family: var(--font-body);
   font-size: 24px;
   font-weight: 700;
@@ -146,21 +135,48 @@ const formUrl = ref('')
   margin-bottom: 12px;
 }
 
-.form-placeholder-text {
+.cta-text {
   font-size: 16px;
   color: var(--color-text-muted);
   line-height: 1.6;
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 420px;
+  margin: 0 auto 32px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cta-perks {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.cta-perks .fa-utensils {
+  color: var(--color-primary);
+  margin-right: 6px;
+}
+
+.cta-button:hover {
+  background: var(--color-primary-dark, var(--color-primary));
+  transform: translateY(-2px);
 }
 
 @media (max-width: 640px) {
-  .form-placeholder {
-    padding: 40px 20px;
-  }
-
-  .ms-form-iframe {
-    min-height: 500px;
+  .cta-card {
+    padding: 40px 24px;
   }
 }
 </style>

@@ -2,7 +2,11 @@
   <section id="about" class="hero">
     <div class="container hero-content">
       <div class="hero-logo">
-        <img src="/compass-logo.webp" alt="COMPASS logo" class="hero-logo-icon" />
+        <img
+          src="/compass-logo.webp"
+          alt="COMPASS logo"
+          class="hero-logo-icon"
+        />
       </div>
       <span class="badge">2026 SYMPOSIUM</span>
       <h1 class="hero-title">
@@ -21,7 +25,7 @@
         researchers.
       </p>
       <div class="hero-actions">
-        <a href="#register" class="btn-primary">
+        <a href="https://www.radboudumc.nl/en/forms/compass-2026-symposium-registration" target="_blank" rel="noopener noreferrer" class="btn-primary">
           Register Now <i class="fas fa-arrow-right"></i>
         </a>
         <a href="#schedule" class="btn-secondary">View Schedule</a>
@@ -41,7 +45,7 @@
 
 <script setup>
 const stats = [
-  { value: "6+", label: "EXPERT SPEAKERS" },
+  { value: "7", label: "EXPERT SPEAKERS" },
   { value: "4", label: "CORE THEMES" },
   { value: "100+", label: "PARTICIPANTS" },
 ];

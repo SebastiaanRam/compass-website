@@ -21,8 +21,20 @@
           >
             <div class="schedule-time">{{ item.time }}</div>
             <div class="schedule-details">
-              <h3 class="schedule-event-title">{{ item.title }}</h3>
-              <p class="schedule-event-desc">{{ item.description }}</p>
+              <div class="schedule-event-header">
+                <h3 class="schedule-event-title">{{ item.title }}</h3>
+                <span
+                  v-if="item.tag"
+                  :class="[
+                    'schedule-tag',
+                    `schedule-tag--${item.tag.toLowerCase()}`,
+                  ]"
+                  >{{ item.tag }}</span
+                >
+              </div>
+              <p class="schedule-event-desc" v-if="item.description">
+                {{ item.description }}
+              </p>
             </div>
           </div>
         </div>
@@ -40,19 +52,84 @@
 <script setup>
 const scheduleItems = [
   {
-    time: "09:00 AM",
-    title: "Opening & Welcome",
-    description: "Introduction to the symposium and its themes.",
+    time: "09:00 – 09:10",
+    title: "Welcome",
+    description: "Opening remarks and introduction to the COMPASS symposium.",
+    tag: "Opening",
   },
   {
-    time: "12:00 PM",
+    time: "09:10 – 09:30",
+    title: "Prof. Dr. Guillén Fernández",
+    description: "Scientific Director, Radboudumc.",
+    tag: "Talk",
+  },
+  {
+    time: "09:30 – 09:50",
+    title: "Speaker 2",
+    description: "To be announced.",
+    tag: "Talk",
+  },
+  {
+    time: "09:50 – 10:10",
+    title: "Speaker 3",
+    description: "To be announced.",
+    tag: "Talk",
+  },
+  {
+    time: "10:10 – 10:30",
+    title: "Coffee Break",
+    description: "Refreshments and informal networking.",
+    tag: "Break",
+  },
+  {
+    time: "10:30 – 11:00",
+    title: "Keynote",
+    description: "Speaker to be announced.",
+    tag: "Keynote",
+  },
+  {
+    time: "11:00 – 12:00",
+    title: "Panel Discussion",
+    description:
+      "An interactive discussion with invited experts on the symposium themes.",
+    tag: "Panel",
+  },
+  {
+    time: "12:00 – 13:00",
     title: "Lunch Break",
-    description: "Networking and refreshments.",
+    description: "Lunch and networking with fellow attendees.",
+    tag: "Break",
   },
   {
-    time: "04:00 PM",
-    title: "Closing Discussion & Reflections",
-    description: "Wrapping up",
+    time: "13:00 – 13:30",
+    title: "Keynote",
+    description: "Speaker to be announced.",
+    tag: "Keynote",
+  },
+  {
+    time: "13:30 – 15:10",
+    title: "Interactive Workshop",
+    description:
+      "Two parallel hands-on collaborative sessions exploring key challenges in human-AI interaction in clinical settings and biomaterials design.",
+    tag: "Workshop",
+  },
+  {
+    time: "15:10 – 15:30",
+    title: "Speaker 4",
+    description: "To be announced.",
+    tag: "Talk",
+  },
+  {
+    time: "15:30 – 15:50",
+    title: "Speaker 5",
+    description: "To be announced.",
+    tag: "Talk",
+  },
+  {
+    time: "15:50 – 16:00",
+    title: "Closing",
+    description: "Closing remarks.",
+    tag: "Closing",
   },
 ];
 </script>
@@ -137,12 +214,51 @@ const scheduleItems = [
   flex: 1;
 }
 
+.schedule-event-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
 .schedule-event-title {
   font-family: var(--font-body);
   font-size: 18px;
   font-weight: 700;
   color: var(--color-text-dark);
-  margin-bottom: 6px;
+}
+
+.schedule-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 50px;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.07);
+  color: var(--color-text-muted);
+}
+
+.schedule-tag--keynote {
+  background: rgba(15, 95, 128, 0.12);
+  color: var(--color-primary);
+}
+
+.schedule-tag--panel {
+  background: rgba(15, 95, 128, 0.12);
+  color: var(--color-primary);
+}
+
+.schedule-tag--workshop {
+  background: rgba(166, 51, 135, 0.1);
+  color: #a63387;
+}
+
+.schedule-tag--break {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text-muted);
 }
 
 .schedule-event-desc {
