@@ -19,7 +19,12 @@
           :class="{ clickable: speaker.bio }"
           @click="speaker.bio && openModal(speaker)"
         >
-          <div class="speaker-image" :style="{ background: speaker.gradient }">
+          <div class="speaker-image" :style="!speaker.photo ? { background: speaker.gradient } : {}">
+            <div
+              v-if="speaker.photo"
+              class="card-photo-bg"
+              :style="{ backgroundImage: `url(${speaker.photo})` }"
+            />
             <span v-if="speaker.keynote" class="keynote-badge">KEYNOTE</span>
             <img
               v-if="speaker.photo"
@@ -52,7 +57,12 @@
               <i class="fas fa-xmark"></i>
             </button>
             <div class="modal-inner">
-              <div class="modal-image" :style="{ background: active.gradient }">
+              <div class="modal-image" :style="!active.photo ? { background: active.gradient } : {}">
+                <div
+                  v-if="active.photo"
+                  class="modal-photo-bg"
+                  :style="{ backgroundImage: `url(${active.photo})` }"
+                />
                 <span v-if="active.keynote" class="keynote-badge">KEYNOTE</span>
                 <img
                   v-if="active.photo"
@@ -248,19 +258,31 @@ const speakers = [
 }
 
 .speaker-image {
-  height: 260px;
+  height: 340px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.card-photo-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  filter: blur(20px) brightness(0.85);
+  transform: scale(1.1);
 }
 
 .speaker-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  position: relative;
+  z-index: 1;
 }
 
 .speaker-initials {
@@ -384,7 +406,18 @@ const speakers = [
   justify-content: center;
   border-radius: 20px 20px 0 0;
   flex-shrink: 0;
+  overflow: hidden;
 }
+
+.modal-photo-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  filter: blur(20px) brightness(0.85);
+  transform: scale(1.1);
+}
+
 
 .modal-body {
   padding: 32px;

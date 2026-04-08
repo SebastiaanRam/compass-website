@@ -57,6 +57,20 @@
         </div>
       </div>
 
+      <div class="footer-acknowledgement">
+        <p class="ack-label">Funded by</p>
+        <a href="https://www.esbiomaterials.eu/young-scientists-forum/" target="_blank" rel="noopener">
+          <img src="/ysf.webp" alt="Young Scientist Forum – European Society for Biomaterials" class="ysf-logo" />
+        </a>
+        <p class="ack-text">
+          This symposium is supported by a grant from the
+          <a href="https://www.esbiomaterials.eu/young-scientists-forum/" target="_blank" rel="noopener">
+            Young Scientist Forum
+          </a>
+          of the European Society for Biomaterials.
+        </p>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 COMPASS Symposium / Radboudumc. All rights reserved.</p>
       </div>
@@ -177,6 +191,55 @@
 
 .footer-contact .contact-item p {
   line-height: 1.5;
+}
+
+.footer-acknowledgement {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 32px 0;
+  text-align: center;
+}
+
+.ack-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+}
+
+.ysf-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+  transition: opacity var(--transition);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ysf-logo:hover {
+  opacity: 1;
+}
+
+.ack-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+}
+
+.ack-text a {
+  color: var(--color-primary-light);
+  transition: color var(--transition);
+}
+
+.ack-text a:hover {
+  color: white;
 }
 
 .footer-bottom {

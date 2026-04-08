@@ -5,6 +5,7 @@ import SpeakersSection from './components/SpeakersSection.vue'
 import ScheduleSection from './components/ScheduleSection.vue'
 import VenueSection from './components/VenueSection.vue'
 import RegistrationSection from './components/RegistrationSection.vue'
+import OrganizersSection from './components/OrganizersSection.vue'
 import FooterSection from './components/FooterSection.vue'
 </script>
 
@@ -15,6 +16,7 @@ import FooterSection from './components/FooterSection.vue'
     <SpeakersSection />
     <ScheduleSection />
     <VenueSection />
+    <OrganizersSection />
     <RegistrationSection />
   </main>
   <FooterSection />
