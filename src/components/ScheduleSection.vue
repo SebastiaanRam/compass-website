@@ -78,13 +78,13 @@ const scheduleItems = [
   {
     time: "10:10 – 10:30",
     title: "Coffee Break",
-    description: "Refreshments and informal networking.",
+    description: "Refreshments and networking.",
     tag: "Break",
   },
   {
     time: "10:30 – 11:00",
-    title: "Keynote",
-    description: "Speaker to be announced.",
+    title: "Dr. Giulio Mecacci",
+    description: "Associate Professor, Donders Institute for Brain, Cognition and Behaviour",
     tag: "Keynote",
   },
   {

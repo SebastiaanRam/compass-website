@@ -144,7 +144,7 @@ const speakers = [
     affiliation: "Donders Institute for Brain, Cognition and Behaviour",
     bio: "Giulio Mecacci is interested in the ethical, legal and societal implications of AI and neurotechnologies, which he approaches from an applied ethics perspective. In particular, he focuses on developing and operationalising the notion of Meaningful Human Control to address responsibility gaps in human-AI interaction. He is also a passionate teacher, delivering bachelor and master courses in ethics and the societal impact of AI. In the Donders CNS master's programme, he teaches the course Neurophilosophy. His main driving ideal is providing future AI and CNS professionals with the skills to create and contribute to an enduring dialogue between science, technology and society.",
     url: "https://www.ru.nl/personen/mecacci-g",
-    keynote: false,
+    keynote: true,
     gradient: "linear-gradient(135deg, #006991 0%, #00AFDC 100%)",
     socials: [],
   },
@@ -161,25 +161,27 @@ const speakers = [
     socials: [],
   },
   {
-    name: "To Be Announced",
-    initials: "TBA",
-    role: "",
-    affiliation: "",
-    bio: "",
-    url: "",
-    keynote: true,
-    gradient: "linear-gradient(135deg, #005A7D 0%, #00A0D1 100%)",
+    name: "Dr. Gerlof Bosma",
+    initials: "GB",
+    photo: "/speakers/bosma.webp",
+    role: "Radiologist, Chairman of Radiology",
+    affiliation: "Elisabeth-TweeSteden Ziekenhuis (ETZ)",
+    bio: "Gerlof Bosma is a radiologist and chairman of the radiology department at the Elisabeth-TweeSteden Ziekenhuis (ETZ) in Tilburg. He received his medical degree from Erasmus University Rotterdam and completed his radiology training at Leiden University Medical Center, where he also obtained his PhD in neuroradiology. His areas of expertise include musculoskeletal, interventional, thoracic, mammography, and abdominal radiology. He specializes in minimally invasive interventional procedures including vessel dilation, shunt interventions, hemorrhage management, and abscess drainage. He is also a member of the national inspection committee for the Dutch Radiology Association.",
+    url: "https://www.etz.nl/specialist/dr-g-p-t-bosma/",
+    keynote: false,
+    gradient: "linear-gradient(135deg, #0F5F80 0%, #00C9FF 100%)",
     socials: [],
   },
   {
-    name: "To Be Announced",
-    initials: "TBA",
-    role: "",
-    affiliation: "",
-    bio: "",
-    url: "",
-    keynote: true,
-    gradient: "linear-gradient(135deg, #005A7D 0%, #00A0D1 100%)",
+    name: "Dr. Denise Hilling",
+    initials: "DH",
+    photo: "/speakers/hilling.webp",
+    role: "Assistant Professor",
+    affiliation: "Erasmus MC, Erasmus University Rotterdam",
+    bio: "Denise Hilling is a surgical researcher at Erasmus MC whose work focuses on gastrointestinal and colorectal cancer treatment. Her expertise encompasses neoadjuvant therapy approaches, fluorescence-guided surgery, and topical tumor visualization. She investigates the integration of artificial intelligence in surgical practice and has authored over 70 publications spanning systematic reviews and clinical studies. Her research further covers minimally invasive surgical techniques and health-related quality of life outcomes in cancer patients.",
+    url: "https://pure.eur.nl/en/persons/denise-hilling/",
+    keynote: false,
+    gradient: "linear-gradient(135deg, #006991 0%, #00AFDC 100%)",
     socials: [],
   },
   {
@@ -297,6 +299,7 @@ const speakers = [
   position: absolute;
   bottom: 16px;
   left: 16px;
+  z-index: 2;
   background: var(--color-primary);
   color: white;
   font-size: 11px;
