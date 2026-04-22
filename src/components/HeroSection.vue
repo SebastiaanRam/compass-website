@@ -17,7 +17,7 @@
       </p>
       <p class="hero-acronym">
         <strong>C</strong>linical <strong>O</strong>versight through
-        <strong>M</strong>eaningful <strong>P</strong>articipation of
+        <strong>M</strong>eaningful <strong>P</strong>articipation in
         <strong>A</strong>I-<strong>S</strong>upported <strong>S</strong>ystems
       </p>
       <p class="hero-description">

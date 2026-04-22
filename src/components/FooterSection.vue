@@ -8,7 +8,7 @@
             <span class="footer-logo-text">COMPASS</span>
           </div>
           <p class="footer-description">
-            Clinical Oversight through Meaningful Participation of AI-Supported
+            Clinical Oversight through Meaningful Participation in AI-Supported
             Systems.
           </p>
           <p class="footer-hosts">
