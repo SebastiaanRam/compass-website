@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .claude-memory/
+.devcontainer/
 
 # Editor directories and files
 .vscode/*

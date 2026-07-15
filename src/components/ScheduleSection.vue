@@ -102,8 +102,8 @@ const scheduleItems = [
   },
   {
     time: "13:00 – 13:30",
-    title: "Keynote",
-    description: "Speaker to be announced.",
+    title: "Erik Gelderblom",
+    description: "Medical Physicist, Radboudumc",
     tag: "Keynote",
   },
   {

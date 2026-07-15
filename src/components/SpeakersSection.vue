@@ -5,8 +5,7 @@
         <div class="speakers-header-text">
           <h2 class="section-title">Featured Speakers</h2>
           <p class="speakers-subtitle">
-            Hear from experts in AI, clinical practice, and ethics. More
-            speakers will be announced soon.
+            Hear from experts in AI, clinical practice, and ethics.
           </p>
         </div>
       </div>
@@ -16,8 +15,8 @@
           class="speaker-card"
           v-for="speaker in speakers"
           :key="speaker.name"
-          :class="{ clickable: speaker.bio }"
-          @click="speaker.bio && openModal(speaker)"
+          :class="{ clickable: speaker.bio || speaker.url }"
+          @click="(speaker.bio || speaker.url) && openModal(speaker)"
         >
           <div class="speaker-image" :style="!speaker.photo ? { background: speaker.gradient } : {}">
             <div
@@ -33,7 +32,7 @@
               class="speaker-photo"
             />
             <div v-else class="speaker-initials">{{ speaker.initials }}</div>
-            <div v-if="speaker.bio" class="card-hint">
+            <div v-if="speaker.bio || speaker.url" class="card-hint">
               <i class="fas fa-circle-info"></i>
             </div>
           </div>
@@ -78,7 +77,7 @@
                 <p class="modal-affiliation" v-if="active.affiliation">
                   {{ active.affiliation }}
                 </p>
-                <p class="modal-bio">{{ active.bio }}</p>
+                <p v-if="active.bio" class="modal-bio">{{ active.bio }}</p>
                 <a
                   v-if="active.url"
                   :href="active.url"
@@ -134,7 +133,6 @@ const speakers = [
     url: "https://www.radboudumc.nl/en/people/guillen-fernandez",
     keynote: false,
     gradient: "linear-gradient(135deg, #0F5F80 0%, #00C9FF 100%)",
-    socials: [],
   },
   {
     name: "Dr. Giulio Mecacci",
@@ -146,7 +144,17 @@ const speakers = [
     url: "https://www.ru.nl/personen/mecacci-g",
     keynote: true,
     gradient: "linear-gradient(135deg, #006991 0%, #00AFDC 100%)",
-    socials: [],
+  },
+  {
+    name: "Erik Gelderblom",
+    initials: "EG",
+    photo: "/speakers/gelderblom.webp",
+    role: "Medical Physicist",
+    affiliation: "Radboudumc",
+    bio: "Erik Gelderblom is a medical physicist at Radboudumc who works at the intersection of healthcare, technology and innovation. His expertise includes the development, evaluation and implementation of medical technology and digital health solutions, with special interest in AI-based systems. He is committed to translating innovations into clinical practice while ensuring patient safety and regulatory compliance.",
+    url: "https://www.linkedin.com/in/egelderblom/",
+    keynote: true,
+    gradient: "linear-gradient(135deg, #0F5F80 0%, #00C9FF 100%)",
   },
   {
     name: "Dr. Banu Buruk",
@@ -158,19 +166,17 @@ const speakers = [
     url: "https://www.ru.nl/personen/buruk-b",
     keynote: false,
     gradient: "linear-gradient(135deg, #A63387 0%, #00AFDC 100%)",
-    socials: [],
   },
   {
     name: "Dr. Gerlof Bosma",
     initials: "GB",
     photo: "/speakers/bosma.webp",
-    role: "Radiologist, Chairman of Radiology",
+    role: "Radiologist, Residency Program Director of Radiology",
     affiliation: "Elisabeth-TweeSteden Ziekenhuis (ETZ)",
-    bio: "Gerlof Bosma is a radiologist and chairman of the radiology department at the Elisabeth-TweeSteden Ziekenhuis (ETZ) in Tilburg. He received his medical degree from Erasmus University Rotterdam and completed his radiology training at Leiden University Medical Center, where he also obtained his PhD in neuroradiology. His areas of expertise include musculoskeletal, interventional, thoracic, mammography, and abdominal radiology. He specializes in minimally invasive interventional procedures including vessel dilation, shunt interventions, hemorrhage management, and abscess drainage. He is also a member of the national inspection committee for the Dutch Radiology Association.",
+    bio: "Gerlof Bosma is a radiologist and residency program director of radiology at the Elisabeth-TweeSteden Ziekenhuis (ETZ) in Tilburg. He received his medical degree from Erasmus University Rotterdam and completed his radiology training at Leiden University Medical Center, where he also obtained his PhD in neuroradiology. His areas of expertise include musculoskeletal, interventional, thoracic, mammography, and abdominal radiology. He specializes in minimally invasive interventional procedures including vessel dilation, shunt interventions, hemorrhage management, and abscess drainage. He is also a member of the national inspection committee for the Dutch Radiology Association.",
     url: "https://www.etz.nl/specialist/dr-g-p-t-bosma/",
     keynote: false,
     gradient: "linear-gradient(135deg, #0F5F80 0%, #00C9FF 100%)",
-    socials: [],
   },
   {
     name: "Dr. Denise Hilling",
@@ -182,29 +188,17 @@ const speakers = [
     url: "https://pure.eur.nl/en/persons/denise-hilling/",
     keynote: false,
     gradient: "linear-gradient(135deg, #006991 0%, #00AFDC 100%)",
-    socials: [],
   },
   {
-    name: "To Be Announced",
-    initials: "TBA",
-    role: "",
-    affiliation: "",
+    name: "Harry Verbunt",
+    initials: "HV",
+    photo: "/speakers/verbunt.webp",
+    role: "Chief Patient Officer",
+    affiliation: "Antoni van Leeuwenhoek (AVL)",
     bio: "",
-    url: "",
+    url: "https://www.linkedin.com/in/harryverbunt/",
     keynote: false,
     gradient: "linear-gradient(135deg, #005A7D 0%, #00A0D1 100%)",
-    socials: [],
-  },
-  {
-    name: "To Be Announced",
-    initials: "TBA",
-    role: "",
-    affiliation: "",
-    bio: "",
-    url: "",
-    keynote: false,
-    gradient: "linear-gradient(135deg, #005A7D 0%, #00A0D1 100%)",
-    socials: [],
   },
 ];
 </script>
@@ -313,6 +307,7 @@ const speakers = [
   position: absolute;
   top: 12px;
   right: 12px;
+  z-index: 2;
   background: rgba(0, 0, 0, 0.35);
   color: white;
   width: 30px;
