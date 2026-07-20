@@ -31,25 +31,10 @@
         <a href="#schedule" class="btn-secondary">View Schedule</a>
       </div>
     </div>
-
-    <div class="stats-bar">
-      <div class="container stats-container">
-        <div class="stat" v-for="stat in stats" :key="stat.label">
-          <span class="stat-number">{{ stat.value }}</span>
-          <span class="stat-label">{{ stat.label }}</span>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 
-<script setup>
-const stats = [
-  { value: "7", label: "EXPERT SPEAKERS" },
-  { value: "4", label: "CORE THEMES" },
-  { value: "100+", label: "PARTICIPANTS" },
-];
-</script>
+<script setup></script>
 
 <style scoped>
 .hero {
@@ -134,34 +119,6 @@ const stats = [
   flex-wrap: wrap;
 }
 
-.stats-bar {
-  border-top: 1px solid var(--color-border);
-  padding: 40px 0;
-}
-
-.stats-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-
-.stat-number {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 36px;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 4px;
-}
-
-.stat-label {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  color: var(--color-text-muted);
-}
-
 @media (max-width: 1024px) {
   .hero-content {
     padding: 60px 24px 40px;
@@ -183,15 +140,6 @@ const stats = [
 
   .hero-description {
     font-size: 16px;
-  }
-
-  .stats-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  .stat-number {
-    font-size: 28px;
   }
 }
 </style>
