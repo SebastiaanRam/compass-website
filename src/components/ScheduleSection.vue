@@ -52,27 +52,29 @@
 <script setup>
 const scheduleItems = [
   {
-    time: "09:00 – 09:10",
+    time: "09:00 – 09:20",
     title: "Welcome",
     description: "Opening remarks and introduction to the COMPASS symposium.",
     tag: "Opening",
   },
   {
-    time: "09:10 – 09:30",
+    time: "09:20 – 09:30",
     title: "Prof. Dr. Guillén Fernández",
-    description: "Scientific Director, Radboudumc.",
-    tag: "Talk",
+    description: "Institutional opening remarks.",
+    tag: "Opening",
   },
   {
     time: "09:30 – 09:50",
-    title: "Speaker 2",
-    description: "To be announced.",
+    title: "Dr. Denise Hilling",
+    description:
+      "Role of the clinician: AI explainability and accountability from a clinician's point of view.",
     tag: "Talk",
   },
   {
     time: "09:50 – 10:10",
-    title: "Speaker 3",
-    description: "To be announced.",
+    title: "Dr. Banu Buruk",
+    description:
+      "Reflections on AI Ethics in Healthcare: Guiding Responsible Innovation.",
     tag: "Talk",
   },
   {
@@ -83,8 +85,8 @@ const scheduleItems = [
   },
   {
     time: "10:30 – 11:00",
-    title: "Dr. Giulio Mecacci",
-    description: "Associate Professor, Donders Institute for Brain, Cognition and Behaviour",
+    title: "Erik Gelderblom",
+    description: "Medical Physicist, Radboudumc",
     tag: "Keynote",
   },
   {
@@ -102,8 +104,9 @@ const scheduleItems = [
   },
   {
     time: "13:00 – 13:30",
-    title: "Erik Gelderblom",
-    description: "Medical Physicist, Radboudumc",
+    title: "Dr. Giulio Mecacci",
+    description:
+      "The importance of responsibility, the risk of responsibility gaps in AI-populated systems, and the importance of meaningful human control.",
     tag: "Keynote",
   },
   {
