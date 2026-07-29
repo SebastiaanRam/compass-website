@@ -190,6 +190,17 @@ const speakers = [
     gradient: "linear-gradient(135deg, #006991 0%, #00AFDC 100%)",
   },
   {
+    name: "Dr.ir. Helma Torkamaan",
+    initials: "HT",
+    photo: "/speakers/torkamaan.webp",
+    role: "Assistant Professor in AI for Health Systems",
+    affiliation: "Delft University of Technology",
+    bio: "Helma Torkamaan is an assistant professor specializing in artificial intelligence applications within health systems at the faculty of Technology, Policy and Management. She earned her PhD from the Interactive Systems group at the University of Duisburg-Essen, focusing on recommender systems in healthcare, and holds a master's degree in computer science from the University of Bonn. Her research employs an interdisciplinary approach combining computer science, psychology, business and healthcare perspectives. She concentrates on developing solutions for complex health system challenges, advancing technology-supported mental and physical wellness, designing user-centered personalized interactive systems, and evaluating AI-driven solutions responsibly, addressing the individual, mental, ecological and societal impacts of technological interventions.",
+    url: "https://www.tudelft.nl/staff/h.torkamaan/",
+    keynote: false,
+    gradient: "linear-gradient(135deg, #A63387 0%, #00AFDC 100%)",
+  },
+  {
     name: "Harry Verbunt",
     initials: "HV",
     photo: "/speakers/verbunt.webp",

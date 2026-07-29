@@ -110,11 +110,17 @@ const scheduleItems = [
     tag: "Keynote",
   },
   {
-    time: "13:30 – 15:10",
+    time: "13:30 – 14:50",
     title: "Interactive Workshop",
     description:
       "Two parallel hands-on collaborative sessions exploring key challenges in human-AI interaction in clinical settings and biomaterials design.",
     tag: "Workshop",
+  },
+  {
+    time: "14:50 – 15:10",
+    title: "Dr.ir. Helma Torkamaan",
+    description: "Assistant Professor in AI for Health Systems, TU Delft",
+    tag: "Talk",
   },
   {
     time: "15:10 – 15:30",
