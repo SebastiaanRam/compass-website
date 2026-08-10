@@ -52,41 +52,47 @@
 <script setup>
 const scheduleItems = [
   {
-    time: "09:00 – 09:20",
+    time: "09:00 – 09:05",
     title: "Welcome",
     description: "Opening remarks and introduction to the COMPASS symposium.",
     tag: "Opening",
   },
   {
-    time: "09:20 – 09:30",
+    time: "09:05 – 09:15",
     title: "Prof. Dr. Guillén Fernández",
     description: "Institutional opening remarks.",
     tag: "Opening",
   },
   {
-    time: "09:30 – 09:50",
+    time: "09:15 – 09:35",
+    title: "Harry Verbunt",
+    description: "AI in the life of a patient",
+    tag: "Talk",
+  },
+  {
+    time: "09:35 – 09:55",
     title: "Dr. Denise Hilling",
     description:
       "Role of the clinician: AI explainability and accountability from a clinician's point of view.",
     tag: "Talk",
   },
   {
-    time: "09:50 – 10:10",
+    time: "09:55 – 10:10",
+    title: "Coffee Break",
+    description: "Refreshments and networking.",
+    tag: "Break",
+  },
+  {
+    time: "10:10 – 10:30",
     title: "Dr. Banu Buruk",
     description:
       "Reflections on AI Ethics in Healthcare: Guiding Responsible Innovation.",
     tag: "Talk",
   },
   {
-    time: "10:10 – 10:30",
-    title: "Coffee Break",
-    description: "Refreshments and networking.",
-    tag: "Break",
-  },
-  {
     time: "10:30 – 11:00",
     title: "Erik Gelderblom",
-    description: "Medical Physicist, Radboudumc",
+    description: "Human oversight: who's watching what?",
     tag: "Keynote",
   },
   {
@@ -110,28 +116,23 @@ const scheduleItems = [
     tag: "Keynote",
   },
   {
-    time: "13:30 – 14:50",
+    time: "13:30 – 15:10",
     title: "Interactive Workshop",
     description:
       "Two parallel hands-on collaborative sessions exploring key challenges in human-AI interaction in clinical settings and biomaterials design.",
     tag: "Workshop",
   },
   {
-    time: "14:50 – 15:10",
+    time: "15:10 – 15:30",
     title: "Dr.ir. Helma Torkamaan",
     description: "Assistant Professor in AI for Health Systems, TU Delft",
     tag: "Talk",
   },
   {
-    time: "15:10 – 15:30",
-    title: "Speaker 4",
-    description: "To be announced.",
-    tag: "Talk",
-  },
-  {
     time: "15:30 – 15:50",
-    title: "Speaker 5",
-    description: "To be announced.",
+    title: "Dr. Gerlof Bosma",
+    description:
+      "Radiologist, Residency Program Director of Radiology, ETZ",
     tag: "Talk",
   },
   {
