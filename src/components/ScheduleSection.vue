@@ -39,11 +39,11 @@
           </div>
         </div>
 
-        <div class="schedule-note">
+        <!-- <div class="schedule-note">
           <i class="fas fa-circle-info"></i>
           The final schedule with confirmed speakers and session details will be
           announced soon.
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -60,7 +60,7 @@ const scheduleItems = [
   {
     time: "09:05 – 09:15",
     title: "Prof. Dr. Guillén Fernández",
-    description: "Institutional opening remarks.",
+    description: "Institutional opening.",
     tag: "Opening",
   },
   {
@@ -77,46 +77,46 @@ const scheduleItems = [
     tag: "Talk",
   },
   {
-    time: "09:55 – 10:10",
+    time: "09:55 – 10:20",
     title: "Coffee Break",
     description: "Refreshments and networking.",
     tag: "Break",
   },
   {
-    time: "10:10 – 10:30",
+    time: "10:20 – 10:40",
     title: "Dr. Banu Buruk",
     description:
       "Reflections on AI Ethics in Healthcare: Guiding Responsible Innovation.",
     tag: "Talk",
   },
   {
-    time: "10:30 – 11:00",
+    time: "10:40 – 11:10",
     title: "Erik Gelderblom",
     description: "Human oversight: who's watching what?",
     tag: "Keynote",
   },
   {
-    time: "11:00 – 12:00",
+    time: "11:10 – 12:10",
     title: "Panel Discussion",
     description:
       "An interactive discussion with invited experts on the symposium themes.",
     tag: "Panel",
   },
   {
-    time: "12:00 – 13:00",
+    time: "12:10 – 13:10",
     title: "Lunch Break",
     description: "Lunch and networking with fellow attendees.",
     tag: "Break",
   },
   {
-    time: "13:00 – 13:30",
+    time: "13:10 – 13:40",
     title: "Dr. Giulio Mecacci",
     description:
       "The importance of responsibility, the risk of responsibility gaps in AI-populated systems, and the importance of meaningful human control.",
     tag: "Keynote",
   },
   {
-    time: "13:30 – 15:10",
+    time: "13:40 – 15:10",
     title: "Interactive Workshop",
     description:
       "Two parallel hands-on collaborative sessions exploring key challenges in human-AI interaction in clinical settings and biomaterials design.",
