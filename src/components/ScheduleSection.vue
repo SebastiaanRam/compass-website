@@ -129,7 +129,7 @@ const scheduleItems = [
   {
     time: "15:10 – 15:30",
     title: "Dr.ir. Helma Torkamaan",
-    description: "Assistant Professor in AI for Health Systems, TU Delft",
+    description: "The 3 in 25 Problem: Human-Centered AI for Health Systems, a bridge from accuracy to applicability and impact.",
     tag: "Talk",
   },
   {
