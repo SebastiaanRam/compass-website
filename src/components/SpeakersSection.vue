@@ -25,6 +25,7 @@
               :style="{ backgroundImage: `url(${speaker.photo})` }"
             />
             <span v-if="speaker.keynote" class="keynote-badge">KEYNOTE</span>
+            <span v-if="speaker.workshop" class="workshop-badge">WORKSHOP</span>
             <img
               v-if="speaker.photo"
               :src="speaker.photo"
@@ -63,6 +64,7 @@
                   :style="{ backgroundImage: `url(${active.photo})` }"
                 />
                 <span v-if="active.keynote" class="keynote-badge">KEYNOTE</span>
+                <span v-if="active.workshop" class="workshop-badge">WORKSHOP</span>
                 <img
                   v-if="active.photo"
                   :src="active.photo"
@@ -211,6 +213,17 @@ const speakers = [
     keynote: false,
     gradient: "linear-gradient(135deg, #005A7D 0%, #00A0D1 100%)",
   },
+  {
+    name: "Dr. Jana Marie Weber",
+    initials: "JW",
+    photo: "/speakers/weber.webp",
+    role: "Assistant Professor, AI in Bioscience",
+    affiliation: "Delft University of Technology",
+    bio: "Jana Marie Weber is an Assistant Professor for AI in Bioscience at TU Delft's Department of Intelligent Systems, where she leads the AI4b.io lab. Her research focuses on molecular machine learning and network science, including molecular property prediction and inverse design. She holds a PhD in Chemical Engineering from the University of Cambridge. At the workshop, her keynote is \"When can we trust a molecular machine learning prediction? Understanding data distributions for responsible molecular AI.\"",
+    url: "https://www.tudelft.nl/en/ewi/over-de-faculteit/afdelingen/intelligent-systems/pattern-recognition-bioinformatics/the-delft-bioinformatics-lab/people/jana-m-weber",
+    workshop: true,
+    gradient: "linear-gradient(135deg, #A63387 0%, #00AFDC 100%)",
+  },
 ];
 </script>
 
@@ -306,6 +319,20 @@ const speakers = [
   left: 16px;
   z-index: 2;
   background: var(--color-primary);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.workshop-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  background: #A63387;
   color: white;
   font-size: 11px;
   font-weight: 700;
