@@ -3,11 +3,11 @@
     <div class="container">
       <div class="schedule-header">
         <h2 class="section-title schedule-title">Schedule</h2>
-        <p class="section-subtitle schedule-sub">
+        <!-- <p class="section-subtitle schedule-sub">
           A tailored one-day program of interactive discussions, panels, and
           talks.
-        </p>
-        <span class="preliminary-badge">Preliminary Schedule</span>
+        </p> -->
+        <!-- <span class="preliminary-badge">Preliminary Schedule</span> -->
       </div>
 
       <div class="schedule-card">
@@ -22,7 +22,10 @@
             <div class="schedule-time">{{ item.time }}</div>
             <div class="schedule-details">
               <div class="schedule-event-header">
-                <h3 class="schedule-event-title">{{ item.title }}</h3>
+                <h3 class="schedule-event-title">
+                  <a v-if="item.anchor" :href="item.anchor" class="schedule-event-link">{{ item.title }}</a>
+                  <template v-else>{{ item.title }}</template>
+                </h3>
                 <span
                   v-if="item.tag"
                   :class="[
@@ -98,8 +101,9 @@ const scheduleItems = [
   {
     time: "11:10 – 12:10",
     title: "Panel Discussion",
+    anchor: "#panel",
     description:
-      "An interactive discussion with invited experts on the symposium themes.",
+      "Jacqueline Kernahan hosts a panel with Emma Rengers, Milan Petković, Dr. Banu Buruk and Merlijn Hutteman on the symposium themes.",
     tag: "Panel",
   },
   {
@@ -237,6 +241,16 @@ const scheduleItems = [
   font-size: 18px;
   font-weight: 700;
   color: var(--color-text-dark);
+}
+
+.schedule-event-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.schedule-event-link:hover {
+  color: var(--color-primary);
 }
 
 .schedule-tag {

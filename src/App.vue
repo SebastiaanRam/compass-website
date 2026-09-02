@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection.vue'
 import ThemesSection from './components/ThemesSection.vue'
 import SpeakersSection from './components/SpeakersSection.vue'
 import ScheduleSection from './components/ScheduleSection.vue'
+import PanelSection from './components/PanelSection.vue'
 import VenueSection from './components/VenueSection.vue'
 import RegistrationSection from './components/RegistrationSection.vue'
 import OrganizersSection from './components/OrganizersSection.vue'
@@ -15,6 +16,7 @@ import FooterSection from './components/FooterSection.vue'
     <ThemesSection />
     <SpeakersSection />
     <ScheduleSection />
+    <PanelSection />
     <VenueSection />
     <OrganizersSection />
     <RegistrationSection />
