@@ -94,8 +94,9 @@ const scheduleItems = [
   },
   {
     time: "10:40 – 11:10",
-    title: "Erik Gelderblom",
-    description: "Human oversight: who's watching what?",
+    title: "Dr. Giulio Mecacci",
+    description:
+      "The importance of responsibility, the risk of responsibility gaps in AI-populated systems, and the importance of meaningful human control.",
     tag: "Keynote",
   },
   {
@@ -114,17 +115,22 @@ const scheduleItems = [
   },
   {
     time: "13:10 – 13:40",
-    title: "Dr. Giulio Mecacci",
-    description:
-      "The importance of responsibility, the risk of responsibility gaps in AI-populated systems, and the importance of meaningful human control.",
+    title: "Erik Gelderblom",
+    description: "Human oversight: who's watching what?",
     tag: "Keynote",
   },
   {
-    time: "13:40 – 15:10",
+    time: "13:40 – 15:00",
     title: "Interactive Workshop",
     description:
       "Two parallel hands-on collaborative sessions exploring key challenges in human-AI interaction in clinical settings and biomaterials design.",
     tag: "Workshop",
+  },
+  {
+    time: "15:00 – 15:10",
+    title: "Coffee Break",
+    description: "Refreshments and networking.",
+    tag: "Break",
   },
   {
     time: "15:10 – 15:30",
@@ -142,7 +148,7 @@ const scheduleItems = [
   {
     time: "15:50 – 16:00",
     title: "Closing",
-    description: "Closing remarks.",
+    description: "Closing of the COMPASS symposium.",
     tag: "Closing",
   },
 ];
